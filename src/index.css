@@ -1,0 +1,596 @@
+html, body, .App {
+  box-sizing: border-box;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url("./IMG/background/bgp1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* 
+-----------------------------------------
+            main container      
+-----------------------------------------
+*/
+
+.main-container {
+  height: 75%;
+  width: 100%;
+}
+
+.main-title-text {
+  font-size: 4rem;
+}
+
+/* 
+-----------------------------------------
+            title container 
+-----------------------------------------
+*/
+
+.title-container {
+  height: 10%;
+  width: 100%;
+  color: #FFFF;
+}
+
+/* 
+-----------------------------------------
+            player container 
+-----------------------------------------
+*/
+
+.player-container {
+  height: 90%;
+  width: 100%;
+  position: relative;
+}
+
+/* 
+-----------------------------------------
+            player-container p1 
+-----------------------------------------
+*/
+
+.p1 {
+  /* border: black solid 1px; */
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  left: 0;
+  border-radius: 3px;
+  gap: 5%;
+}
+
+.p1-profile-container {
+  border: black solid 1px;
+  height: 90%;
+  width: 50%;
+  gap: 2.5%;
+  border-radius: 3px;
+  background: #FFFF;
+  margin-top: 5%;
+}
+
+.p1-img-container {
+  height: 35%;
+  width: 40%;
+  border-radius: 3px;
+}
+
+.p1-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.p1-name-container {
+  height: 5%;
+  width: 100%;
+}
+
+.p1-desc-container {
+  height: 30%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+.mp-bar {
+  width: 90%;
+  height: 30%;
+  border-radius: 5px;
+  border: red 3px solid;
+  background: red;
+}
+
+.health-bar {
+  width: 90%;
+  height: 30%;
+  border-radius: 5px;
+  border: green 3px solid;
+  background: green;
+}
+
+.p1-desc-container-title {
+  height: 10%;
+}
+
+/* Attack and Defend Container */
+
+.p1-atk-def-container {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+.atk-container {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.atk-title {
+  height: 25%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.sword-opt {
+  height: 70%;
+  width: 30%;
+  margin-top: 10%;
+}
+
+.def-container {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+.def-title {
+  height: 25%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.shield-opt {
+  height: 70%;
+  width: 30%;
+  margin-top: 10%;
+}
+
+/* P1 Elemental Option container */
+
+.p1-option-container {
+  height: 10%;
+  width: 100%;
+  gap: 1%;
+  position: relative;
+}
+
+.p1-option-fire {
+  background: #F00000;  
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);  
+  background: linear-gradient(to right, #DC281E, #F00000); 
+  color: white;
+  z-index: 6;
+  left: 5%;
+}
+
+.p1-option-water {
+  background: #00d2ff;  
+  background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);  
+  background: linear-gradient(to right, #928DAB, #00d2ff);
+  color: white;
+  position: absolute;
+  left: 3%;
+  z-index: 5;
+}
+
+.p1-option-lightning {
+  background: #CAC531;  
+  background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  
+  background: linear-gradient(to right, #F3F9A7, #CAC531); 
+  color: black;
+  position: absolute;
+  left: 1%;
+  z-index: 4;
+}
+
+.p1-option-snow {
+  background: #ADA996;  
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+  color: black;
+  position: absolute;
+  left: -1%;
+  z-index: 3;
+}
+
+.p1-option-earth {
+  background: #F3904F;  
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  
+  background: linear-gradient(to right, #3B4371, #F3904F); 
+  color: white;
+  position: absolute;
+  left: -3%;
+  z-index: 2;
+}
+
+.p1-option-wind {
+  background: #FFFF;  
+  background: -webkit-linear-gradient(to right, #FFFF, #FFFFFF);  
+  background: linear-gradient(to right, #FFFF, FFFFFF#F3904F); 
+  color: black;
+  position: absolute;
+  left: -5%;
+  z-index: 1;
+}
+
+/* 
+-----------------------------------------
+            battle-container p2
+-----------------------------------------
+*/
+
+.battle-container {
+  /* background: white; */
+  height: 100%;
+  width: 20%;
+  position: relative;
+}
+
+.p1-battle {
+  background: white;
+  width: 125%;
+  height: 35%;
+  position: absolute;
+  top: 10%;
+  border-radius: 3px;
+}
+
+.p2-battle {
+  background: white;
+  width: 125%;
+  height: 35%;
+  position: absolute; 
+  bottom: 17.5%; 
+  border-radius: 3px;
+}
+
+.top-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  transform: rotate(180deg);
+}
+
+.bottom-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10%;
+}
+
+.arrowBattle {
+  height: 10%;
+  z-index: 1;
+}
+
+/* 
+-----------------------------------------
+            player-container p2
+-----------------------------------------
+*/
+
+.p2 {
+  /* border: black solid 1px; */
+  height: 100%;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  border-radius: 3px;
+  gap: 5%;
+}
+
+.p2-profile-container {
+  border: black solid 1px;
+  height: 90%;
+  width: 50%;
+  gap: 2.5%;
+  border-radius: 3px;
+  background: #FFFF;
+  margin-top: 5%;
+}
+
+.p2-img-container {
+  height: 35%;
+  width: 40%;
+  border-radius: 3px;
+}
+
+.p2-img {
+  height: 100%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.p2-name-container {
+  height: 5%;
+  width: 100%;
+}
+
+.p2-desc-container {
+  height: 30%;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content:flex-start;
+}
+
+.mp-bar {
+  width: 90%;
+  height: 30%;
+  border-radius: 5px;
+  border: black 2px solid;
+  background: red;
+}
+
+.health-bar {
+  width: 90%;
+  height: 30%;
+  border-radius: 5px;
+  border: black 2px solid;
+  background: green;
+}
+
+.p2-desc-container-title {
+  height: 10%;
+}
+
+/* Attack and Defend Container */
+
+.p2-atk-def-container {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+.atk-container {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+}
+
+.atk-title {
+  height: 25%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.sword-opt {
+  height: 70%;
+  width: 30%;
+  margin-top: 10%;
+}
+
+.def-container {
+  height: 100%;
+  width: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+.def-title {
+  height: 25%;
+  width: 100%;
+  margin-top: 0;
+}
+
+.shield-opt {
+  height: 70%;
+  width: 30%;
+  margin-top: 10%;
+}
+
+/* P1 Elemental Option container */
+
+.p2-option-container {
+  height: 10%;
+  width: 100%;
+  gap: 1%;
+  position: relative;
+}
+
+.p2-option-fire {
+  background: #F00000;  
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);  
+  background: linear-gradient(to right, #DC281E, #F00000); 
+  color: white;
+  z-index: 6;
+  left: 5%;
+}
+
+.p2-option-water {
+  background: #00d2ff;  
+  background: -webkit-linear-gradient(to right, #928DAB, #00d2ff);  
+  background: linear-gradient(to right, #928DAB, #00d2ff);
+  color: white;
+  position: absolute;
+  left: 3%;
+  z-index: 5;
+}
+
+.p2-option-lightning {
+  background: #CAC531;  
+  background: -webkit-linear-gradient(to right, #F3F9A7, #CAC531);  
+  background: linear-gradient(to right, #F3F9A7, #CAC531); 
+  color: black;
+  position: absolute;
+  left: 1%;
+  z-index: 4;
+}
+
+.p2-option-snow {
+  background: #ADA996;  
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); 
+  color: black;
+  position: absolute;
+  left: -1%;
+  z-index: 3;
+}
+
+.p2-option-earth {
+  background: #F3904F;  
+  background: -webkit-linear-gradient(to right, #3B4371, #F3904F);  
+  background: linear-gradient(to right, #3B4371, #F3904F); 
+  color: white;
+  position: absolute;
+  left: -3%;
+  z-index: 2;
+}
+
+.p2-option-wind {
+  background: #FFFF;  
+  background: -webkit-linear-gradient(to right, #FFFF, #FFFFFF);  
+  background: linear-gradient(to right, #FFFF, FFFFFF#F3904F); 
+  color: black;
+  position: absolute;
+  left: -5%;
+  z-index: 1;
+}
+
+/* 
+-----------------------------------------
+            Score container 
+-----------------------------------------
+*/
+
+.score-container {
+  width: 100%;
+  height: 25%;
+  gap: 10%;
+}
+
+.die {
+  height: 60%;
+
+}
+
+.roll-die {
+  width: 10%;
+  height: 20%;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+/* 
+-----------------------------------------
+            misc 
+-----------------------------------------
+*/
+
+.fx {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.cl {
+  flex-direction: column;
+}
+
+.rw {
+  flex-direction: row;
+}
+
+.opt {
+  height: 100%;
+  width: 20%;
+  border-radius: 3px;
+  position: relative;
+  box-sizing: unset;
+}
+
+.opt-img {
+  height: 60%;
+  width: 100%;
+  bottom: 30%;
+  position: absolute;
+  user-select: none;
+}
+
+.opt-title {
+  font-size: 1rem;
+  height: 5%;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  user-select: none;
+}
+
+.ct {
+  text-align: center;
+}
+
+.active {
+  border: 3px green solid;
+  box-shadow: 3px 3px 3px green;
+}
+
+.op {
+  opacity: 0.5;
+}
+
+.ck {
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  background: transparent;
+  z-index: 1;
+  border-radius: 3px;
+}
+
+.bs {
+  box-shadow: 8px 8px 3px -2px rgba(0,0,0,0.88);
+}
+
+.fs {
+  text-shadow: 5px 5px 3px  rgba(0,0,0,0.88);
+}
+
+.tac {
+  text-align: center;
+}
